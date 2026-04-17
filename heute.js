@@ -1,4 +1,4 @@
-// Istra Bakery — interactive route map for heute.html
+// Glorija's Bakery — interactive route map for heute.html
 // Depends on Leaflet (loaded globally as window.L).
 (function () {
   "use strict";
