@@ -1,4 +1,4 @@
-# Istra Bakery — Landingpage
+# Glorija's Bakery — Landingpage
 
 Statische, konversion-optimierte Landingpage für eine Brotmanufaktur in Istrien.
 Primärziel: B2B-Leads (Hotels & Apartments) via „Kostenlose Probe anfragen",
