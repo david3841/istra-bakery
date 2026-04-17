@@ -153,29 +153,43 @@
       </div>
     </section>
 
-    <!-- PRODUKT -->
-    <section id="produkt" class="section section--alt">
+    <!-- PRODUKT — Unser tägliches Brot -->
+    <section id="produkt" class="section section--alt product-stage">
       <div class="container">
-        <div class="split">
-          <figure class="split__media reveal">
-            <img
-              src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=1000&q=80"
-              alt="Angeschnittenes Sauerteigbrot, grobe Krume"
-              width="1000" height="1200" loading="lazy" decoding="async" />
-          </figure>
-
-          <div class="split__copy reveal">
-            <p class="eyebrow">Unser Brot</p>
-            <h2 class="heading">Klassischer Sauerteig.<br/>Ehrlich, kräftig, lange frisch.</h2>
-            <p class="body">Langzeitgeführter Teig, knusprige Kruste, saftige Krume. Ein Brot, das zum istrischen Frühstück passt – und am Abend noch schmeckt.</p>
-            <ul class="pills" aria-label="Varianten">
-              <li>Klassisch</li>
-              <li>Dinkel</li>
-              <li>Oliven</li>
-            </ul>
-            <p class="muted small">Weitere Varianten auf Anfrage.</p>
+        <header class="section__head product-stage__head reveal">
+          <p class="eyebrow">Deutsches Handwerksbrot – täglich auf Route</p>
+          <h2 class="display product-stage__title">Unser tägliches Brot.</h2>
+          <p class="lead">Frisch gebacken nach deutschen Rezepten – jeden Tag eine besondere Sorte.</p>
+          <div class="cta-row cta-row--center product-stage__ctas">
+            <a class="btn btn--primary" href="heute.html">👉 Route heute ansehen</a>
+            <a class="btn btn--terracotta" href="#kontakt">👉 Für Hotels &amp; Partner bestellen</a>
           </div>
+        </header>
+
+        <div class="bread-slider" data-slider role="region" aria-roledescription="Karussell" aria-label="Unsere Brot-Sorten">
+          <button class="bread-slider__nav bread-slider__nav--prev" type="button" aria-label="Vorheriges Brot" data-slider-prev>
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 6l-6 6 6 6"/></svg>
+          </button>
+
+          <ul class="bread-slider__track" data-slider-track></ul>
+
+          <button class="bread-slider__nav bread-slider__nav--next" type="button" aria-label="Nächstes Brot" data-slider-next>
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 6l6 6-6 6"/></svg>
+          </button>
+
+          <ol class="bread-slider__dots" data-slider-dots aria-label="Slide auswählen"></ol>
         </div>
+
+        <div class="today-strip reveal">
+          <p class="today-strip__line"><span class="today-strip__icon" aria-hidden="true">📍</span> Heute unterwegs in: <strong>Fažana · Pula · Vodnjan</strong></p>
+          <p class="today-strip__line"><span class="today-strip__icon" aria-hidden="true">🕘</span> ca. 09:30 – 11:30</p>
+          <a class="btn btn--primary btn--compact today-strip__cta" href="heute.html">Route live ansehen</a>
+        </div>
+
+        <p class="micro-story reveal">
+          <em>Gebacken nachts – geliefert am Morgen.</em><br/>
+          Ohne Zusatzstoffe, nach traditionellen Rezepten.
+        </p>
       </div>
     </section>
 

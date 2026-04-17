@@ -69,4 +69,148 @@
     }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
     revealEls.forEach(function (el) { ro.observe(el); });
   }
+
+  // --- Bread slider (Produkt-Sektion) ------------------------------------
+  // Pflege-Hinweis: Tag-Varianten "standard" | "week" | "next" | "seasonal"
+  // steuern die Farbe via CSS-Klassen .bread-slide__tag--*.
+  var BREADS = [
+    {
+      tag: "Standard · Signature",
+      tagVariant: "standard",
+      name: "Joghurtkrustenbrot",
+      desc: "Knusprig, mild, jeden Tag verfügbar.",
+      img: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80",
+      alt: "Joghurtkrustenbrot mit knuspriger Kruste"
+    },
+    {
+      tag: "Diese Woche",
+      tagVariant: "week",
+      name: "Zwiebelbrot",
+      desc: "Herzhaft, perfekt zum Frühstück.",
+      img: "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=900&q=80",
+      alt: "Aufgeschnittenes Zwiebelbrot"
+    },
+    {
+      tag: "Nächste Woche",
+      tagVariant: "next",
+      name: "Sonnenblumenkernbrot",
+      desc: "Saftig, nussig, lange frisch.",
+      img: "https://images.unsplash.com/photo-1568471173242-461f0a730452?auto=format&fit=crop&w=900&q=80",
+      alt: "Sonnenblumenkernbrot, körnig"
+    }
+  ];
+
+  var slider = document.querySelector("[data-slider]");
+  if (slider) {
+    var track = slider.querySelector("[data-slider-track]");
+    var dotsList = slider.querySelector("[data-slider-dots]");
+    var prevBtn = slider.querySelector("[data-slider-prev]");
+    var nextBtn = slider.querySelector("[data-slider-next]");
+    var total = BREADS.length;
+
+    BREADS.forEach(function (b, i) {
+      var li = document.createElement("li");
+      li.className = "bread-slide";
+      li.setAttribute("role", "group");
+      li.setAttribute("aria-roledescription", "Slide");
+      li.setAttribute("aria-label", (i + 1) + " von " + total + " – " + b.name);
+      li.innerHTML =
+        '<figure class="bread-slide__media">' +
+          '<img src="' + b.img + '" alt="' + b.alt + '" loading="lazy" decoding="async" width="900" height="900" />' +
+        '</figure>' +
+        '<div class="bread-slide__body">' +
+          '<span class="bread-slide__tag bread-slide__tag--' + b.tagVariant + '">' + b.tag + '</span>' +
+          '<h3 class="bread-slide__name">' + b.name + '</h3>' +
+          '<p class="bread-slide__desc">' + b.desc + '</p>' +
+        '</div>';
+      track.appendChild(li);
+
+      var dotLi = document.createElement("li");
+      var dotBtn = document.createElement("button");
+      dotBtn.type = "button";
+      dotBtn.setAttribute("aria-label", "Slide " + (i + 1) + ": " + b.name);
+      if (i === 0) dotBtn.setAttribute("aria-current", "true");
+      dotBtn.addEventListener("click", function () { goTo(i); });
+      dotLi.appendChild(dotBtn);
+      dotsList.appendChild(dotLi);
+    });
+
+    var slides = track.querySelectorAll(".bread-slide");
+    var dotButtons = dotsList.querySelectorAll("button");
+    var current = 0;
+
+    function goTo(index) {
+      var i = ((index % total) + total) % total;
+      var target = slides[i];
+      if (!target) return;
+      track.scrollTo({
+        left: target.offsetLeft - (track.clientWidth - target.clientWidth) / 2,
+        behavior: reduceMotion ? "auto" : "smooth"
+      });
+    }
+
+    function setActive(i) {
+      if (i === current) return;
+      current = i;
+      dotButtons.forEach(function (b, idx) {
+        if (idx === i) b.setAttribute("aria-current", "true");
+        else b.removeAttribute("aria-current");
+      });
+    }
+
+    if ("IntersectionObserver" in window) {
+      var slideObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting && e.intersectionRatio >= 0.6) {
+            var idx = Array.prototype.indexOf.call(slides, e.target);
+            if (idx >= 0) setActive(idx);
+          }
+        });
+      }, { root: track, threshold: [0.6, 0.9] });
+      slides.forEach(function (s) { slideObserver.observe(s); });
+    }
+
+    if (prevBtn) prevBtn.addEventListener("click", function () { goTo(current - 1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { goTo(current + 1); });
+
+    slider.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft")  { e.preventDefault(); goTo(current - 1); }
+      if (e.key === "ArrowRight") { e.preventDefault(); goTo(current + 1); }
+    });
+
+    // Auto-rotate (paused on hover/focus, hidden tab, or off-screen)
+    var autoTimer = null;
+    var inView = false;
+    var paused = false;
+
+    function tick() {
+      if (reduceMotion || paused || !inView || document.visibilityState !== "visible") return;
+      goTo(current + 1);
+    }
+    function start() {
+      if (reduceMotion || autoTimer) return;
+      autoTimer = setInterval(tick, 6000);
+    }
+    function stop() {
+      if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+    }
+
+    if (!reduceMotion && "IntersectionObserver" in window) {
+      var visObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          inView = e.isIntersecting;
+          if (inView) start(); else stop();
+        });
+      }, { threshold: 0.2 });
+      visObserver.observe(slider);
+    }
+
+    slider.addEventListener("mouseenter", function () { paused = true; });
+    slider.addEventListener("mouseleave", function () { paused = false; });
+    slider.addEventListener("focusin",    function () { paused = true; });
+    slider.addEventListener("focusout",   function () { paused = false; });
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState !== "visible") stop(); else if (inView) start();
+    });
+  }
 })();
