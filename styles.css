@@ -722,3 +722,142 @@ p { margin: 0; }
   .route__stops li { grid-template-columns: 60px 1fr; gap: 12px; padding: 11px 14px; }
   .route__time { font-size: 18px; }
 }
+
+/* ===========================================================
+   Preise-Seite (preise.html)
+   =========================================================== */
+
+/* Hero on /preise has no media — center copy and widen max width */
+.hero__grid--single { grid-template-columns: 1fr; max-width: 820px; }
+@media (min-width: 900px) {
+  .hero__grid--single { grid-template-columns: 1fr; }
+}
+.hero__intro { max-width: 640px; margin-top: 18px; }
+
+/* ---------- Price tiers ---------- */
+.price-tiers {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; gap: 16px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 600px) {
+  .price-tiers { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 980px) {
+  .price-tiers { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+}
+.price-tier {
+  background: var(--color-warm-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: grid; gap: 4px;
+  color: var(--color-ink-soft);
+  box-shadow: var(--shadow-soft);
+  text-align: left;
+}
+.price-tier__range {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--color-ink);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.price-tier__unit {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink-mute);
+  margin-bottom: 10px;
+}
+.price-tier__price {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4.2vw, 40px);
+  font-weight: 700;
+  color: var(--color-olive);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  display: flex; align-items: baseline; gap: 8px;
+}
+.price-tier__prefix {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-ink-mute);
+  letter-spacing: 0;
+  text-transform: lowercase;
+  font-family: var(--font-sans);
+}
+.price-tier__per {
+  font-size: 14px;
+  color: var(--color-ink-mute);
+}
+.price-tier--featured {
+  background: var(--color-olive);
+  border-color: transparent;
+  color: #F1EED2;
+  box-shadow: var(--shadow-card);
+}
+.price-tier--featured .price-tier__range { color: #fff; }
+.price-tier--featured .price-tier__unit { color: #D9D9B5; }
+.price-tier--featured .price-tier__price { color: #fff; }
+.price-tier--featured .price-tier__prefix { color: #D9D9B5; }
+.price-tier--featured .price-tier__per { color: #E1E1C1; }
+
+.price-note {
+  margin-top: 22px;
+  text-align: center;
+}
+
+/* ---------- Season cards ---------- */
+.season-intro {
+  max-width: 760px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+.season-cards {
+  display: grid; gap: 18px;
+  grid-template-columns: 1fr;
+  margin-bottom: 32px;
+}
+@media (min-width: 720px) {
+  .season-cards { grid-template-columns: repeat(2, 1fr); }
+}
+.season-card {
+  background: var(--color-warm-white);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: grid; gap: 10px;
+  box-shadow: var(--shadow-soft);
+}
+.season-card h3 {
+  font-family: var(--font-serif);
+  font-size: 22px;
+}
+.season-card .ticks li::before { background: var(--color-olive); }
+.season-card .ticks li::after  { border-color: var(--color-olive); }
+.season-card--peak .ticks li::before { background: var(--color-terracotta); }
+.season-card--peak .ticks li::after  { border-color: var(--color-terracotta); }
+.season-card--peak h3 { color: var(--color-terracotta-dk); }
+
+.season-example {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px;
+  background: var(--color-sand-deep);
+  border-radius: var(--radius-md);
+  text-align: center;
+  display: grid; gap: 12px;
+  justify-items: center;
+}
+
+/* ---------- CTA microcopy ---------- */
+.cta-final__micro {
+  margin-top: 20px;
+  color: #C9C196;
+}
+
+/* ---------- Audience grid (3-up) ---------- */
+@media (min-width: 980px) {
+  .audience-grid { grid-template-columns: repeat(3, 1fr); }
+}
