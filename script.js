@@ -97,14 +97,6 @@
       desc: "Saftig, nussig, lange frisch.",
       img: "https://images.unsplash.com/photo-1568471173242-461f0a730452?auto=format&fit=crop&w=900&q=80",
       alt: "Sonnenblumenkernbrot, körnig"
-    },
-    {
-      tag: "Saisonal",
-      tagVariant: "seasonal",
-      name: "Kürbis- / Kartoffelbrot",
-      desc: "Wechselndes Spezial je nach Saison.",
-      img: "https://images.unsplash.com/photo-1600398138360-c5be0c2a47fa?auto=format&fit=crop&w=900&q=80",
-      alt: "Saisonales Kürbis- oder Kartoffelbrot"
     }
   ];
 

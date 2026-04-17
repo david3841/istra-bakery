@@ -1042,7 +1042,7 @@ p { margin: 0; }
   .bread-slide { flex-basis: 48%; }
 }
 @media (min-width: 1040px) {
-  .bread-slide { flex-basis: 32%; }
+  .bread-slide { flex-basis: 42%; }
 }
 
 .bread-slide__media {
