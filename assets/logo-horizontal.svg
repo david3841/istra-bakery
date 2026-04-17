@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 72" role="img" aria-label="Glorija's Bakery — Handwerk aus Istrien">
+  <title>Glorija's Bakery</title>
+  <desc>Horizontale Lockup-Variante: Emblem + Wortmarke + Tagline. Schriftrendering benoetigt Cormorant Garamond und Inter; fuer Druck Outlines erstellen.</desc>
+
+  <!-- ===== Emblem links (Mark aus logo-mark.svg, skaliert) ===== -->
+  <g transform="translate(4 4) scale(1)">
+    <g fill="#6B7A3A" stroke="#2B1F15" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round">
+      <g transform="translate(22 30) rotate(-22)">
+        <path d="M0 22 L0 -4" fill="none" stroke-width="1.2"/>
+        <ellipse cx="-3"  cy="18" rx="2" ry="3.6" transform="rotate(-28 -3 18)"/>
+        <ellipse cx="3"   cy="16" rx="2" ry="3.6" transform="rotate(28 3 16)"/>
+        <ellipse cx="-3"  cy="12" rx="2" ry="3.6" transform="rotate(-28 -3 12)"/>
+        <ellipse cx="3"   cy="10" rx="2" ry="3.6" transform="rotate(28 3 10)"/>
+        <ellipse cx="-2.5" cy="6"  rx="1.8" ry="3.2" transform="rotate(-28 -2.5 6)"/>
+        <ellipse cx="2.5"  cy="4"  rx="1.8" ry="3.2" transform="rotate(28 2.5 4)"/>
+        <ellipse cx="0"    cy="-1" rx="1.4" ry="2.8"/>
+      </g>
+      <g transform="translate(42 30) rotate(22)">
+        <path d="M0 22 L0 -4" fill="none" stroke-width="1.2"/>
+        <ellipse cx="-3"  cy="18" rx="2" ry="3.6" transform="rotate(-28 -3 18)"/>
+        <ellipse cx="3"   cy="16" rx="2" ry="3.6" transform="rotate(28 3 16)"/>
+        <ellipse cx="-3"  cy="12" rx="2" ry="3.6" transform="rotate(-28 -3 12)"/>
+        <ellipse cx="3"   cy="10" rx="2" ry="3.6" transform="rotate(28 3 10)"/>
+        <ellipse cx="-2.5" cy="6"  rx="1.8" ry="3.2" transform="rotate(-28 -2.5 6)"/>
+        <ellipse cx="2.5"  cy="4"  rx="1.8" ry="3.2" transform="rotate(28 2.5 4)"/>
+        <ellipse cx="0"    cy="-1" rx="1.4" ry="2.8"/>
+      </g>
+    </g>
+    <path d="M8 44
+             C 8 35, 17 29, 32 29
+             C 47 29, 56 35, 56 44
+             L 56 52
+             C 56 54.2, 54.2 56, 52 56
+             L 12 56
+             C 9.8 56, 8 54.2, 8 52 Z"
+          fill="#6B7A3A" fill-opacity="0.18"
+          stroke="#2B1F15" stroke-width="1.6" stroke-linejoin="round"/>
+    <g stroke="#2B1F15" stroke-width="1.2" stroke-linecap="round" fill="none">
+      <path d="M18 40 l 5 -4"/>
+      <path d="M28 38 l 5 -4"/>
+      <path d="M38 38 l 5 -4"/>
+    </g>
+  </g>
+
+  <!-- ===== Wortmarke + Tagline rechts ===== -->
+  <g transform="translate(80 0)" fill="#2B1F15">
+    <text x="0" y="36"
+          font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif"
+          font-size="28"
+          font-weight="600"
+          letter-spacing="0.2">Glorija's <tspan font-style="italic" font-weight="500">Bakery</tspan></text>
+    <text x="2" y="54"
+          font-family="'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif"
+          font-size="9"
+          font-weight="600"
+          letter-spacing="2.4"
+          fill="#6B7A3A">HANDWERK AUS ISTRIEN</text>
+  </g>
+</svg>

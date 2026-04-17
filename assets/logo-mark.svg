@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Glorija's Bakery">
+  <title>Glorija's Bakery</title>
+  <desc>Handwerkliches Emblem: Brotlaib flankiert von zwei Getreideaehren. Verwende currentColor fuer einfarbige Varianten.</desc>
+
+  <!-- ===== Getreideaehren (links + rechts, spiegelsymmetrisch) ===== -->
+  <g fill="#6B7A3A" stroke="#2B1F15" stroke-width="0.9" stroke-linejoin="round" stroke-linecap="round">
+    <!-- Linke Aehre -->
+    <g transform="translate(22 30) rotate(-22)">
+      <path d="M0 22 L0 -4" fill="none" stroke-width="1.2"/>
+      <ellipse cx="-3"  cy="18" rx="2" ry="3.6" transform="rotate(-28 -3 18)"/>
+      <ellipse cx="3"   cy="16" rx="2" ry="3.6" transform="rotate(28 3 16)"/>
+      <ellipse cx="-3"  cy="12" rx="2" ry="3.6" transform="rotate(-28 -3 12)"/>
+      <ellipse cx="3"   cy="10" rx="2" ry="3.6" transform="rotate(28 3 10)"/>
+      <ellipse cx="-2.5" cy="6"  rx="1.8" ry="3.2" transform="rotate(-28 -2.5 6)"/>
+      <ellipse cx="2.5"  cy="4"  rx="1.8" ry="3.2" transform="rotate(28 2.5 4)"/>
+      <ellipse cx="0"    cy="-1" rx="1.4" ry="2.8"/>
+    </g>
+    <!-- Rechte Aehre (gespiegelt) -->
+    <g transform="translate(42 30) rotate(22)">
+      <path d="M0 22 L0 -4" fill="none" stroke-width="1.2"/>
+      <ellipse cx="-3"  cy="18" rx="2" ry="3.6" transform="rotate(-28 -3 18)"/>
+      <ellipse cx="3"   cy="16" rx="2" ry="3.6" transform="rotate(28 3 16)"/>
+      <ellipse cx="-3"  cy="12" rx="2" ry="3.6" transform="rotate(-28 -3 12)"/>
+      <ellipse cx="3"   cy="10" rx="2" ry="3.6" transform="rotate(28 3 10)"/>
+      <ellipse cx="-2.5" cy="6"  rx="1.8" ry="3.2" transform="rotate(-28 -2.5 6)"/>
+      <ellipse cx="2.5"  cy="4"  rx="1.8" ry="3.2" transform="rotate(28 2.5 4)"/>
+      <ellipse cx="0"    cy="-1" rx="1.4" ry="2.8"/>
+    </g>
+  </g>
+
+  <!-- ===== Brotlaib (Sauerteig, rustikal) ===== -->
+  <g>
+    <path d="M8 44
+             C 8 35, 17 29, 32 29
+             C 47 29, 56 35, 56 44
+             L 56 52
+             C 56 54.2, 54.2 56, 52 56
+             L 12 56
+             C 9.8 56, 8 54.2, 8 52 Z"
+          fill="#6B7A3A" fill-opacity="0.18"
+          stroke="#2B1F15" stroke-width="1.6" stroke-linejoin="round"/>
+
+    <!-- Scoring / Sauerteig-Einschnitte -->
+    <g stroke="#2B1F15" stroke-width="1.2" stroke-linecap="round" fill="none">
+      <path d="M18 40 l 5 -4"/>
+      <path d="M28 38 l 5 -4"/>
+      <path d="M38 38 l 5 -4"/>
+    </g>
+  </g>
+</svg>
