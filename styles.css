@@ -365,6 +365,12 @@ p { margin: 0; }
   padding: clamp(24px, 3vw, 36px);
   border: 1px solid var(--color-line);
 }
+.ps-col--problem {
+  background: var(--color-warm-white);
+  border: 1px solid var(--color-line);
+  color: var(--color-ink-soft);
+}
+.ps-col--problem .ps-col__title { color: var(--color-ink-soft); }
 .ps-col--solution {
   background: var(--color-ink);
   color: #E8DEC9;
@@ -387,7 +393,11 @@ p { margin: 0; }
   font-weight: 700; font-size: 14px;
   line-height: 1;
 }
-.ps-mark--x { background: rgba(194,105,74,.18); color: var(--color-terracotta); }
+.ps-mark--dot {
+  width: 8px; height: 8px;
+  background: var(--color-ink-mute);
+  margin-top: 9px;
+}
 .ps-mark--check { background: rgba(107,122,58,.25); color: #E3E8C3; }
 
 /* ---------- Steps ---------- */
