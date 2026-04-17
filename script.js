@@ -1,4 +1,4 @@
-// Istra Bakery — landing page interactions (vanilla JS, no deps)
+// Glorija's Bakery — landing page interactions (vanilla JS, no deps)
 (function () {
   "use strict";
 
