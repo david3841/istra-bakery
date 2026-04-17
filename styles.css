@@ -350,46 +350,6 @@ p { margin: 0; }
 .card--b2c .ticks li::before { background: var(--color-terracotta); }
 .card--b2c .ticks li::after  { border-color: var(--color-terracotta); }
 
-/* ---------- Problem / Solution ---------- */
-.ps-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-}
-@media (min-width: 820px) {
-  .ps-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
-}
-.ps-col {
-  background: var(--color-sand);
-  border-radius: var(--radius-lg);
-  padding: clamp(24px, 3vw, 36px);
-  border: 1px solid var(--color-line);
-}
-.ps-col--solution {
-  background: var(--color-ink);
-  color: #E8DEC9;
-  border-color: transparent;
-}
-.ps-col--solution .ps-col__title { color: #fff; }
-.ps-col__title {
-  font-family: var(--font-serif);
-  font-size: clamp(20px, 2.2vw, 24px);
-  margin-bottom: 18px;
-  color: var(--color-ink);
-}
-.ps-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
-.ps-list li { display: flex; gap: 12px; align-items: flex-start; }
-.ps-mark {
-  flex: none;
-  width: 24px; height: 24px;
-  display: inline-flex; align-items: center; justify-content: center;
-  border-radius: 50%;
-  font-weight: 700; font-size: 14px;
-  line-height: 1;
-}
-.ps-mark--x { background: rgba(194,105,74,.18); color: var(--color-terracotta); }
-.ps-mark--check { background: rgba(107,122,58,.25); color: #E3E8C3; }
-
 /* ---------- Steps ---------- */
 .steps {
   list-style: none; padding: 0; margin: 0;
