@@ -37,6 +37,7 @@
 
       <nav class="nav" aria-label="Hauptnavigation">
         <a href="#zielgruppen">Angebot</a>
+        <a href="#kanaele">Kanäle</a>
         <a href="#ablauf">Ablauf</a>
         <a href="#produkt">Produkt</a>
         <a href="#kontakt">Kontakt</a>
@@ -107,6 +108,21 @@
               <li>Ein fester Ansprechpartner</li>
             </ul>
             <a class="btn btn--primary" href="#kontakt">Probe anfragen</a>
+
+            <nav class="card__links" aria-label="Direktwege für Hotels">
+              <a href="#kontakt" class="card__link">
+                <span class="card__link-label">Probe</span>
+                <span class="card__link-meta">kostenlos testen</span>
+              </a>
+              <a href="#preise" class="card__link">
+                <span class="card__link-label">Preise</span>
+                <span class="card__link-meta">Staffel, fair</span>
+              </a>
+              <a href="#ablauf" class="card__link">
+                <span class="card__link-label">Ablauf</span>
+                <span class="card__link-meta">in 3 Schritten</span>
+              </a>
+            </nav>
           </article>
 
           <article class="card card--b2c reveal">
@@ -120,13 +136,75 @@
               <li>Abholung oder Lieferung nach Region</li>
             </ul>
             <a class="btn btn--whatsapp" data-wa="b2c" href="#">WhatsApp öffnen</a>
+
+            <nav class="card__links" aria-label="Direktwege für Privatkunden">
+              <a href="#" data-wa="b2c" class="card__link">
+                <span class="card__link-label">WhatsApp</span>
+                <span class="card__link-meta">direkt bestellen</span>
+              </a>
+              <a href="#mobil" class="card__link">
+                <span class="card__link-label">Standort / Route</span>
+                <span class="card__link-meta">heute unterwegs</span>
+              </a>
+            </nav>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- VERTRIEBSKANÄLE -->
+    <section id="kanaele" class="section section--alt">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Vertriebskanäle</p>
+          <h2 class="heading">Drei Wege, wie unser Brot zu dir kommt.</h2>
+        </header>
+
+        <div class="channels">
+          <article class="card channel reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M3 21V8l9-5 9 5v13M9 21v-6h6v6M7 11h2M11 11h2M15 11h2"/></svg>
+            </div>
+            <h3>Für Hotels</h3>
+            <p>Tägliche Lieferung, feste Basismenge, flexibel anpassbar.</p>
+            <ul class="ticks">
+              <li>Tägliche Lieferung</li>
+              <li>Feste Mengen &amp; Tour</li>
+            </ul>
+            <a class="btn btn--primary" href="#kontakt">Probe anfragen</a>
+          </article>
+
+          <article id="mobil" class="card channel channel--mobile reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M3 17V8h11v9M14 12h4l3 3v2h-7M6 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0M16 17a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/></svg>
+            </div>
+            <h3>Mobiler Verkauf</h3>
+            <p>Feste Routen, direkte Lieferung vor Ort (Caddy-Modell).</p>
+            <p class="channel__today">
+              <span class="channel__today-label">Heute unterwegs in:</span>
+              <span class="channel__today-value">Fažana &amp; Pula</span>
+            </p>
+            <a class="btn btn--terracotta" href="#route">Route ansehen</a>
+          </article>
+
+          <article class="card channel reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" d="M3 7l9-4 9 4v10l-9 4-9-4V7M3 7l9 4 9-4M12 11v10"/></svg>
+            </div>
+            <h3>Direktbestellung</h3>
+            <p>Per WhatsApp bestellen — Lieferung in der Region oder Abholung.</p>
+            <ul class="ticks">
+              <li>Bestellung per WhatsApp</li>
+              <li>Abholung möglich</li>
+            </ul>
+            <a class="btn btn--whatsapp" data-wa="b2c" href="#">WhatsApp öffnen</a>
           </article>
         </div>
       </div>
     </section>
 
     <!-- PROBLEM / LÖSUNG -->
-    <section id="problem" class="section section--alt">
+    <section id="problem" class="section">
       <div class="container">
         <header class="section__head">
           <p class="eyebrow">Warum wir</p>
